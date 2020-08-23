@@ -8,7 +8,11 @@ def create_app():
 
     @app.route('/')
     def index():
-        return 'Index page'
+        return 'Index page yo'
+
+    @app.route('/greeting/<username>')
+    def greeting(username):
+        return 'Kia Ora young %s!' % username
 
     @app.route('/hello')
     def hello():
